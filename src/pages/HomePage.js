@@ -2,7 +2,7 @@ import React from 'react';
 
 import testVideo from '../assets/video/test.mp4';
 
-class OverviewPage extends React.Component {
+class HomePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
@@ -16,4 +16,4 @@ class OverviewPage extends React.Component {
   }
 }
 
-export default OverviewPage;
+export default HomePage;

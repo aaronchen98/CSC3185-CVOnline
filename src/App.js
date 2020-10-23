@@ -64,7 +64,7 @@ class App extends Component {
                   to='/'
                   onClick={this.closeCollapse('mainNavbarCollapse')}
                 >
-                  <strong>Overview</strong>
+                  <strong>Home</strong>
                 </MDBNavLink>
               </MDBNavItem>
               <MDBNavItem>
@@ -73,12 +73,12 @@ class App extends Component {
                     <span className="mr-2"><strong>Topics</strong></span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="#!">Image/Video Classification</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Object Detection</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Instance Segmentation</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Image/Video Enhancement</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Generative Adversarial Networks</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Object tracking</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/image-video-classification">Image/Video Classification</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/object-detection">Object Detection</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/instance-segmentation">Instance Segmentation</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/image-video-enhancement">Image/Video Enhancement</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/generative-adversarial-networks">Generative Adversarial Networks</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/object-tracking">Object Tracking</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
@@ -88,13 +88,13 @@ class App extends Component {
                     <span className="mr-2"><strong>Applications</strong></span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="#!">Retail</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Healthcare</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Manufacturing</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Autonomous vehicles</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Insurance</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Agriculture</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Defense and Security</MDBDropdownItem>
+                    <MDBDropdownItem href="/applications/retail">Retail</MDBDropdownItem>
+                    <MDBDropdownItem href="/applications/healthcare">Healthcare</MDBDropdownItem>
+                    <MDBDropdownItem href="applications/manufacturing">Manufacturing</MDBDropdownItem>
+                    <MDBDropdownItem href="/applications/autonomous-vehicles">Autonomous Vehicles</MDBDropdownItem>
+                    <MDBDropdownItem href="/applications/insurance">Insurance</MDBDropdownItem>
+                    <MDBDropdownItem href="/applications/agriculture">Agriculture</MDBDropdownItem>
+                    <MDBDropdownItem href="/applications/defense-and-security">Defense and Security</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
