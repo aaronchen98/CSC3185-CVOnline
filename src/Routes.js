@@ -2,19 +2,19 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import HomePage from './pages/HomePage'
-import ImageVideoClassificationPage from './pages/ImageVideoClassificationPage'
-import ObjectDetectionPage from './pages/ObjectDetectionPage'
-import InstanceSegmentationPage from './pages/InstanceSegmentationPage'
-import ImageVideoEnhancementPage from './pages/ImageVideoEnhancementPage'
-import GenerativeAdversarialNetworksPage from './pages/GenerativeAdversarialNetworksPage'
-import ObjectTrackingPage from './pages/ObjectTrackingPage'
-import RetailPage from './pages/RetailPage'
-import HealthcarePage from './pages/HealthcarePage'
-import ManufacturingPage from './pages/ManufacturingPage'
-import AutonomousVehiclesPage from './pages/AutonomousVehiclesPage'
-import InsurancePage from './pages/InsurancePage'
-import AgriculturePage from './pages/AgriculturePage'
-import DefenseAndSecurityPage from './pages/DefenseAndSecurityPage'
+import ImageVideoClassificationPage from './pages/topics/ImageVideoClassificationPage'
+import ObjectDetectionPage from './pages/topics/ObjectDetectionPage'
+import InstanceSegmentationPage from './pages/topics/InstanceSegmentationPage'
+import ImageVideoEnhancementPage from './pages/topics/ImageVideoEnhancementPage'
+import GenerativeAdversarialNetworksPage from './pages/topics/GenerativeAdversarialNetworksPage'
+import ObjectTrackingPage from './pages/topics/ObjectTrackingPage'
+import RetailPage from './pages/applications/RetailPage'
+import HealthcarePage from './pages/applications/HealthcarePage'
+import ManufacturingPage from './pages/applications/ManufacturingPage'
+import AutonomousVehiclesPage from './pages/applications/AutonomousVehiclesPage'
+import InsurancePage from './pages/applications/InsurancePage'
+import AgriculturePage from './pages/applications/AgriculturePage'
+import DefenseAndSecurityPage from './pages/applications/DefenseAndSecurityPage'
 
 class Routes extends React.Component {
   render() {
