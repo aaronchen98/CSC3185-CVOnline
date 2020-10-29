@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './applications.css';
 class DefenseAndSecurityPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 

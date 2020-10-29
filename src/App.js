@@ -48,6 +48,7 @@ class App extends Component {
     const { collapseID } = this.state;
 
     return (
+      
       <Router>
         <MDBNavbar color='indigo' dark expand='md' fixed='top' scrolling>
           <MDBNavbarBrand href='/' className='py-0 font-weight-bold'>
@@ -90,7 +91,7 @@ class App extends Component {
                   <MDBDropdownMenu>
                     <MDBDropdownItem href="/applications/retail">Retail</MDBDropdownItem>
                     <MDBDropdownItem href="/applications/healthcare">Healthcare</MDBDropdownItem>
-                    <MDBDropdownItem href="applications/manufacturing">Manufacturing</MDBDropdownItem>
+                    <MDBDropdownItem href="/applications/manufacturing">Manufacturing</MDBDropdownItem>
                     <MDBDropdownItem href="/applications/autonomous-vehicles">Autonomous Vehicles</MDBDropdownItem>
                     <MDBDropdownItem href="/applications/insurance">Insurance</MDBDropdownItem>
                     <MDBDropdownItem href="/applications/agriculture">Agriculture</MDBDropdownItem>
