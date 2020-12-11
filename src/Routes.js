@@ -21,6 +21,7 @@ class Routes extends React.Component {
     return (
       <Switch>
         <Route exact path='/' component={HomePage} />
+        <Route exact path='/homepage' component={HomePage} />
         <Route exact path='/topics/image-video-classification' component={ImageVideoClassificationPage} />
         <Route exact path='/topics/object-detection' component={ObjectDetectionPage} />
         <Route exact path='/topics/instance-segmentation' component={InstanceSegmentationPage} />

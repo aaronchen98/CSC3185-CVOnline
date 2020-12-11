@@ -51,7 +51,7 @@ class App extends Component {
       
       <Router>
         <MDBNavbar color='indigo' dark expand='md' fixed='top' scrolling>
-          <MDBNavbarBrand href='/' className='py-0 font-weight-bold'>
+          <MDBNavbarBrand href='/homepage' className='py-0 font-weight-bold'>
             <strong className='align-middle'>CV Online</strong>
           </MDBNavbarBrand>
           <MDBNavbarToggler
@@ -62,7 +62,7 @@ class App extends Component {
               <MDBNavItem>
                 <MDBNavLink
                   exact
-                  to='/'
+                  to='/homepage'
                   onClick={this.closeCollapse('mainNavbarCollapse')}
                 >
                   <strong>Home</strong>

@@ -1,5 +1,5 @@
 import React from 'react';
-import './applications.css';
+import '../css/pages.css';
 import manufacturing1 from './img/manufacturing1.png';
 class ManufacturingPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
@@ -7,6 +7,8 @@ class ManufacturingPage extends React.Component {
   render() {
     return (
       <>
+      <div class = "body">
+        <div class="page">
         {/* Write your HTML/JSX below */}
         <h1>Manufacturing</h1>
         <br/>
@@ -32,6 +34,8 @@ class ManufacturingPage extends React.Component {
         <p>For example, cell phones and mobile devices require smaller and smaller printed circuit boards (or PCBs).  As manufacturers are pressured to produce higher volumes of PCBs for the ever-growing tech market, they are looking towards a process known as “panelization”.  In this process, a number of identical circuit boards are printed onto a large panel, each circuit is then separated by the machine for final testing, in order to inspect these boards, however, a machine vision-based solution called PanelScan was developed to read the barcodes – which are the unique identifiers of each circuit that is present on the PCN panel.</p>
         <br/>
         {/* Write your HTML/JSX above */}
+        </div>
+        </div>
       </>
     )
   }
