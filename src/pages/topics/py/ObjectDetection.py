@@ -6,7 +6,6 @@ import numpy as np
 from PIL import Image
 
 image_path = './1.png'
-label_path = './imagenet_classes.txt'
 
 
 net = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
