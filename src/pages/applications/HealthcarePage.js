@@ -18,7 +18,7 @@ class HealthcarePage extends React.Component {
         <p>Undoubtedly, <b>medical image</b> analysis is the best known example, since it helps to significantly improve the medical diagnostic process. Images from MRIs, CT scans, and X-rays are analyzed to find anomalies such as tumors or search for signs of neurological illnesses.</p>
         <p>In many cases, it’s all about image analysis techniques, which extract features from images in order to train a classifier to be able to detect anomalies. However, there are specific applications where finer processing is required. For example, in the analysis of images from colonoscopies, it is necessary to segment the images to look for polyps and prevent colorectal cancer.</p>
         <div align="center"><img src={health1}></img>
-        <div class="discription">Volume segmentation of a 3D-rendered CT scan of the thorax</div> </div>
+        <div class="description">Volume segmentation of a 3D-rendered CT scan of the thorax</div> </div>
         <p>The image above is a result of image segmentation used to visualize thoracic elements. The system segments and colors each important part: the pulmonary arteries (blue), the pulmonary veins (red), the mediastinum (yellow), and the diaphragm (violet).</p>
         <p>A large amount of applications of this type are currently in use, as varied as techniques that estimate the amount of blood lost due to postpartum hemorrhages; quantify coronary artery calcium; and evaluate blood flow in the human body without an MRI.</p>
         

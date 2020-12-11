@@ -32,7 +32,7 @@ class RetailPage extends React.Component {
         <p>When it comes to inventory management, there are two main computer vision applications.</p>
         <p>Through security camera image analysis, a computer vision algorithm can generate a <b>very accurate estimate of the items available in the store</b>. This is extremely valuable information for store managers, who can immediately become aware of an unusual increase in demand and react early and efficiently.</p>
         <div align="center"><img src={retail1}></img> 
-        <div class="discription">Another fairly common application is <b>analyzing the use of shelf space to identify suboptimal configurations</b>. In addition to discovering lost space, an algorithm of this nature can suggest better item placement.</div></div>      
+        <div class="description">Another fairly common application is <b>analyzing the use of shelf space to identify suboptimal configurations</b>. In addition to discovering lost space, an algorithm of this nature can suggest better item placement.</div></div>      
        
         <h2>Vending store </h2>
         <p>Computer vision technology can be treated as a detection tool. The Amazon Go concept store in Seattle tracks shoppers using CV, with sensors on the shelves detecting when they pick up an item. It then registers all the items in the shopper’s shopping basket with the Go mobile app, and does away with the checkout process altogether – the shopper simply leaves the shop, with the Go app taking the money automatically from the shopper’s nominated credit card. The receipt is sent straight to the app.</p>
