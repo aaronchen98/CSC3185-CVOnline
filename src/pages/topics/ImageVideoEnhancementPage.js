@@ -6,10 +6,14 @@ class ImageVideoEnhancementPage extends React.Component {
   render() {
     return (
       <>
+      <div class = "body">
+        <div class="page">
         {/* Write your HTML/JSX below */}
         <h1>Example Title</h1>
         <p>Example text</p>
         {/* Write your HTML/JSX above */}
+        </div>
+        </div>
       </>
     )
   }

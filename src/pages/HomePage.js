@@ -8,9 +8,13 @@ class HomePage extends React.Component {
   render() {
     return (
       <>
+      <div class = "body">
+        <div class="page">
         <h1>Hello!</h1>
         <p>A paragraph</p>
         {/* <video controls src={testVideo} type="video/mp4" /> */}
+        </div>
+        </div>
       </>
     )
   }

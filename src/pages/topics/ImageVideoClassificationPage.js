@@ -1,11 +1,13 @@
 import React from 'react';
-
+import '../css/pages.css';
 class ImageVideoClassificationPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
+      <div class = "body">
+        <div class="page">
         {/* Write your HTML/JSX below */}
 
         <h1 id="toc_0">Image Classification</h1>
@@ -27,6 +29,8 @@ class ImageVideoClassificationPage extends React.Component {
 
 
         {/* Write your HTML/JSX above */}
+        </div>
+        </div>
       </>
     )
   }
