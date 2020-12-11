@@ -16,6 +16,7 @@ import {
   MDBIcon
 } from "mdbreact";
 import "./index.css";
+import ParticlesBg from 'particles-bg';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import Routes from './Routes';
@@ -48,7 +49,9 @@ class App extends Component {
     const { collapseID } = this.state;
 
     return (
+      <>
       
+      <div class="body">
       <Router>
         <MDBNavbar color='indigo' dark expand='md' fixed='top' scrolling>
           <MDBNavbarBrand href='/homepage' className='py-0 font-weight-bold'>
@@ -103,9 +106,13 @@ class App extends Component {
           </MDBCollapse>
         </MDBNavbar>
         {collapseID && overlay}
-        <main style={{ marginTop: '4rem' }}>
+        <div >
+          
           <Routes />
-        </main>
+        </div>
+        {/* <main style={{ marginTop: '4rem' }}>
+          <Routes />
+        </main> */}
         <MDBFooter color='indigo'>
             <p className='footer-copyright mb-0 py-3 text-center'>
               &copy; {new Date().getFullYear()} Copyright:
@@ -113,6 +120,8 @@ class App extends Component {
             </p>
           </MDBFooter>
       </Router>
+      </div>
+      </>
     );
   }
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography, Space } from 'antd';
 import '../css/pages.css';
-
+import ParticlesBg from 'particles-bg';
 import retail1 from './img/retail1.png';
 import retail2 from './img/retail2.png';
 class RetailPage extends React.Component {
@@ -10,21 +10,14 @@ class RetailPage extends React.Component {
   render() {
     const retailVideo = 'https://www.youtube.com/watch?v=jiaNA1hln5I&feature=emb_logo';
     return (
-      
-        
-        // {/* <div>
-        //   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-        //   <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.birds.min.js"></script>
-        //   <script>
-        //     VANTA.WAVES('#my-background')
-        //   </script>
-        // </div> */}
         <>
         
         
-        <div class = "body">
+        
+        {/* <div class = "body"> */}
+
+        <ParticlesBg type="circle" bg={true} />
         <div class="page">
-        {/* Write your HTML/JSX below */}
         <h1>Retail</h1>
         <div class="introduction">The use of computer vision in the retail sector has been one of the most important technological trends in recent years. Below, you’ll be introduced to some very common use cases. </div>
         
@@ -44,10 +37,10 @@ class RetailPage extends React.Component {
         <h2>Vending store </h2>
         <p>Computer vision technology can be treated as a detection tool. The Amazon Go concept store in Seattle tracks shoppers using CV, with sensors on the shelves detecting when they pick up an item. It then registers all the items in the shopper’s shopping basket with the Go mobile app, and does away with the checkout process altogether – the shopper simply leaves the shop, with the Go app taking the money automatically from the shopper’s nominated credit card. The receipt is sent straight to the app.</p>
         <div align="center"><img src={retail2}></img></div>
-        {/* <br/> */}
-        {/* Write your HTML/JSX above */}
         </div>
-        </div>
+       
+        {/* </div> */}
+        
         </>
     )
   }

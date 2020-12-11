@@ -1,11 +1,13 @@
 import React from 'react';
 import '../css/pages.css';
+import ParticlesBg from 'particles-bg';
 class ObjectTrackingPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
+      <ParticlesBg type="square" bg={true} />
       <div class = "body">
         <div class="page">
         {/* Write your HTML/JSX below */}

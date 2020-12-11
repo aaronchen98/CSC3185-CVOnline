@@ -1,6 +1,8 @@
 import React from 'react';
 import '../css/pages.css';
-import vehicle1 from './img/vehicle1.png'
+import vehicle1 from './img/vehicle1.png';
+import ParticlesBg from 'particles-bg';
+
 class AutonomousVehiclesPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
@@ -8,6 +10,7 @@ class AutonomousVehiclesPage extends React.Component {
     const vehicleVideo = "https://www.youtube.com/watch?v=7Xyd9SKM8ws";
     return (
       <>
+      <ParticlesBg type="circle" bg={true} />
       <div class = "body">
         <div class="page">
         {/* Write your HTML/JSX below */}

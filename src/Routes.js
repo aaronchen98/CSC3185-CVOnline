@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import './index.css';
 
 import HomePage from './pages/HomePage'
 import ImageVideoClassificationPage from './pages/topics/ImageVideoClassificationPage'
@@ -19,6 +20,7 @@ import DefenseAndSecurityPage from './pages/applications/DefenseAndSecurityPage'
 class Routes extends React.Component {
   render() {
     return (
+      <>
       <Switch>
         <Route exact path='/' component={HomePage} />
         <Route exact path='/homepage' component={HomePage} />
@@ -41,6 +43,7 @@ class Routes extends React.Component {
           }}
         />
       </Switch>
+      </>
     )
   }
 }

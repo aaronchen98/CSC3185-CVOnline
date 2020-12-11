@@ -1,12 +1,14 @@
 import React from 'react';
 import '../css/pages.css';
 import health1 from './img/health1.png';
+import ParticlesBg from 'particles-bg';
 class HealthcarePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
+      <ParticlesBg type="circle" bg={true} />
       <div class = "body">
         <div class="page">
         {/* Write your HTML/JSX below */}

@@ -1,11 +1,12 @@
 import React from 'react';
-
+import ParticlesBg from 'particles-bg';
 class ImageVideoEnhancementPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
+      <ParticlesBg type="square" bg={true} />
       <div class = "body">
         <div class="page">
         {/* Write your HTML/JSX below */}

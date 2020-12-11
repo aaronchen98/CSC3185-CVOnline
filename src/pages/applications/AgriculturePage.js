@@ -1,12 +1,15 @@
 import React from 'react';
 import '../css/pages.css';
-import agriculture1 from './img/agriculture1.png'
+import agriculture1 from './img/agriculture1.png';
+
+import ParticlesBg from 'particles-bg';
 class AgriculturePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
+      <ParticlesBg type="circle" bg={true} />
       <div class = "body">
         <div class="page">
         {/* Write your HTML/JSX below */}

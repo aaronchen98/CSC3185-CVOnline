@@ -1,8 +1,15 @@
+.bg {
+    position: "absolute";
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: gray;
+}
 .body{
-    margin: 0;
+    
     height: 100%;
     width: 100%;
-    background-color: rgb(193, 191, 191);
+    
 }
 
 .page {
@@ -13,6 +20,7 @@
     padding-left: 5rem;
     padding-right: 5rem;
     background-color: white;
+    box-shadow: inset 1px 2px 5px 1px #c8c8c8;
     
 }
 .page h1{
@@ -46,11 +54,11 @@
 }
 .introduction {
     color: gray;
-    /* font-style: italic; */
+    font-style: italic;
     border-left: 5px solid rgb(167, 167, 167);
-    box-shadow: 1px 1px 2px 1px #c8c8c8;
+    /* box-shadow: 1px 1px 2px 1px #c8c8c8; */
     padding:0.2rem 1rem 0.2rem 1rem;
-    background-color: #fdfbfb;
+    /* background-color: #fdfbfb; */
     font-family: 'Courier New', Courier, monospace;
     
 }
