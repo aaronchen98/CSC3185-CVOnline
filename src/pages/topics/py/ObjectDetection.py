@@ -5,7 +5,7 @@ import torchvision.models as models
 import numpy as np
 from PIL import Image
 
-image_path = './1.png'
+image_path = './dog.jpeg'
 
 
 net = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)
@@ -51,7 +51,10 @@ for idx in range(boxes.shape[0]):
             name = names.get(str(labels[idx].item()))   
             cv2.putText(src_img, text=name, org=(x1, y1+10), fontFace=cv2.FONT_HERSHEY_SIMPLEX, 
                 fontScale=0.5, thickness=1, lineType=cv2.LINE_AA, color=(0, 0, 255))
-            cv2.imshow('result',src_img)
-cv2.waitKey()
-cv2.destroyAllWindows()
+            # cv2.imshow('result',src_img)
+
+cv2.imwrite('./output/detection.png', src_img)
+
+# cv2.waitKey()
+# cv2.destroyAllWindows()
 

@@ -8,7 +8,7 @@ import cv2
 
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-image_path = './1.png'
+image_path = './dog.jpeg'
 
 # img = Image.open(image_path)
 # plt.imshow(img); plt.show()
@@ -72,9 +72,9 @@ def segment(net, path):
 	               T.Normalize(mean = [0.485, 0.456, 0.406], 
 	                           std = [0.229, 0.224, 0.225])])
 	inp = trf(img).unsqueeze(0)
-	print('1')
+	# print('1')
 	out = net(inp)['out']
-	print('2')
+	# print('2')
 	om = torch.argmax(out.squeeze(), dim=0).detach().cpu().numpy()
 	rgb = decode_segmap(om)
 	# plt.imshow(rgb)
@@ -84,6 +84,8 @@ def segment(net, path):
 
 
 rgb = segment(fcn, image_path)
-cv2.imshow('result',rgb)
-cv2.waitKey()
-cv2.destroyAllWindows()
+cv2.imwrite('./output/segmentation.png', rgb)
+
+# cv2.imshow('result',rgb)
+# cv2.waitKey()
+# cv2.destroyAllWindows()

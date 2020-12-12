@@ -4,11 +4,15 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 import numpy as np
 from PIL import Image
+import matplotlib.pyplot as plt
 
 
-image_path = './1.png'
+image_path = './plane.jpeg'
 label_path = './imagenet_classes.txt'
 
+
+import os
+os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
 transform = transforms.Compose([            #[1]
 	 transforms.Resize(256),                    #[2]
@@ -61,3 +65,14 @@ print(classes[index[0]], percentage[index[0]].item())
 _, indices = torch.sort(out, descending=True)
 top_5 = [(classes[idx], percentage[idx].item()) for idx in indices[0][:5]] 
 print(top_5)
+
+name = [i[0] for i in top_5]
+num = [i[1] for i in top_5]
+# name_list = ['Monday','Tuesday','Friday','Sunday']
+# num_list = [1.5,0.6,7.8,6]
+plt.barh(range(len(num)), num,tick_label = name)
+# plt.show()
+plt.savefig('./output/classification.png', bbox_inches='tight')
+
+
+
