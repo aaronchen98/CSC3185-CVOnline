@@ -11,5 +11,5 @@
 
 ## Some considerations when writing a page
 1. If you want to add a introduction at the beginning of the page, wrap it by `<div class="introduction">The introduction</div>`
-2. If you wand to add a description of image or video, wrap it by `<div class="center"><div class="img">The discription</div></div>`
+2. If you wand to add a description of image or video, wrap it by `<div class="center"><div class="img">The description</div></div>`
 3. Wrap title by `<hx>Title</hx>` where x = {1,2,3}, Wrap content by `<p>Content<\p>`
