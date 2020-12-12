@@ -1,7 +1,7 @@
 import React from 'react';
 import ParticlesBg from 'particles-bg';
-import Foot from '../Foot';
-import Navabar from '../Navabar';
+import Foot from '../component/Foot';
+import Navabar from '../component/Navabar';
 class GenerativeAdversarialNetworksPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 

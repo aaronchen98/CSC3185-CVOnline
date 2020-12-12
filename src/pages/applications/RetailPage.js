@@ -2,8 +2,8 @@ import React from 'react';
 import ParticlesBg from 'particles-bg';
 import retail1 from './img/retail1.png';
 import retail2 from './img/retail2.png';
-import Foot from '../Foot';
-import Navabar from '../Navabar';
+import Foot from '../component/Foot';
+import Navabar from '../component/Navabar';
 class RetailPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 

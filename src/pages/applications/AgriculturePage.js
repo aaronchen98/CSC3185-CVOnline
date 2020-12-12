@@ -1,7 +1,7 @@
 import React from 'react';
 import agriculture1 from './img/agriculture1.png';
-import Foot from '../Foot';
-import Navabar from '../Navabar';
+import Foot from '../component/Foot';
+import Navabar from '../component/Navabar';
 import ParticlesBg from 'particles-bg';
 class AgriculturePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
