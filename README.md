@@ -1,7 +1,7 @@
 ## How to run
 1. Install NodeJS and NPM from https://nodejs.org/en/download/
 2. Use Aliyun NPM mirror from https://developer.aliyun.com/mirror/NPM
-3. Open the root folder in Terminal and run `npm install` or you can use `npm install --registry=https://registry.npm.taobao.or` to speed up
+3. Open the root folder in Terminal and run `npm install` or you can use `npm install --registry=https://registry.npm.taobao.org` to speed up
 4. Run `npm start` (Once the installation is complete, skip the previous steps)
 
 ## How to add new page
