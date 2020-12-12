@@ -1,7 +1,7 @@
 import React from 'react';
-import '../css/pages.css';
 import agriculture1 from './img/agriculture1.png';
-
+import Foot from '../Foot';
+import Navabar from '../Navabar';
 import ParticlesBg from 'particles-bg';
 class AgriculturePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
@@ -9,8 +9,9 @@ class AgriculturePage extends React.Component {
   render() {
     return (
       <>
-      <ParticlesBg type="circle" bg={true} />
       <div class = "body">
+      <ParticlesBg type="fountain" bg={true} />
+        <Navabar/>
         <div class="page">
         {/* Write your HTML/JSX below */}
         <h1>Agriculture</h1>
@@ -23,6 +24,7 @@ class AgriculturePage extends React.Component {
         
         {/* Write your HTML/JSX above */}
         </div>
+        <Foot/>
         </div>
       </>
     )

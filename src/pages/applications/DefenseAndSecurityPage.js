@@ -1,14 +1,17 @@
 import React from 'react';
-import '../css/pages.css';
 import ParticlesBg from 'particles-bg';
+import Foot from '../Foot';
+import Navabar from '../Navabar';
 class DefenseAndSecurityPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
-      <ParticlesBg type="circle" bg={true} />
+      
       <div class = "body">
+      <ParticlesBg type="fountain" bg={true} />
+        <Navabar/>
         <div class="page">
         {/* Write your HTML/JSX below */}
         <h1>Defense and Security</h1>
@@ -17,6 +20,7 @@ class DefenseAndSecurityPage extends React.Component {
         <p>In general, computer vision is used extensively in <b>defense tasks</b> such as reconnaissance of enemy terrain, automatic identification of enemies in images, automating vehicle and machine movements, and search and rescue.</p>
         {/* Write your HTML/JSX above */}
         </div>
+        <Foot/>
         </div>
       </>
     )

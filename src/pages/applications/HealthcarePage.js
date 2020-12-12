@@ -1,15 +1,18 @@
 import React from 'react';
-import '../css/pages.css';
 import health1 from './img/health1.png';
 import ParticlesBg from 'particles-bg';
+import Foot from '../Foot';
+import Navabar from '../Navabar';
 class HealthcarePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
-      <ParticlesBg type="circle" bg={true} />
+      
       <div class = "body">
+      <ParticlesBg type="fountain" bg={true} />
+        <Navabar/>
         <div class="page">
         {/* Write your HTML/JSX below */}
         <h1>Healthcare</h1>
@@ -33,6 +36,7 @@ class HealthcarePage extends React.Component {
         <p>These algorithms not only use these patient data to make diagnoses, but they also provide personalized health information and education in greater detail than a doctor ever could.</p>
         {/* Write your HTML/JSX above */}
         </div>
+        <Foot/>
         </div>
       </>
     )

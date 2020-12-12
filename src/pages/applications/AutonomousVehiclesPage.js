@@ -1,7 +1,8 @@
 import React from 'react';
-import '../css/pages.css';
 import vehicle1 from './img/vehicle1.png';
 import ParticlesBg from 'particles-bg';
+import Foot from '../Foot';
+import Navabar from '../Navabar';
 
 class AutonomousVehiclesPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
@@ -10,8 +11,10 @@ class AutonomousVehiclesPage extends React.Component {
     const vehicleVideo = "https://www.youtube.com/watch?v=7Xyd9SKM8ws";
     return (
       <>
-      <ParticlesBg type="circle" bg={true} />
       <div class = "body">
+      <ParticlesBg type="fountain" bg={true} />
+      <Navabar/>
+      
         <div class="page">
         {/* Write your HTML/JSX below */}
         <h1>Autonomous vehicles</h1>
@@ -23,6 +26,7 @@ class AutonomousVehiclesPage extends React.Component {
         <p>This kind of technology, combined with the analysis of data from other sources, such as sensors and/or radars, is what allows a car to “see”.</p>
         {/* Write your HTML/JSX above */}
         </div>
+        <Foot/>
         </div>
       </>
     )
