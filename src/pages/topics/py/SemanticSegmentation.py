@@ -5,10 +5,12 @@ import matplotlib.pyplot as plt
 import torch
 import os	
 import cv2
+import sys
 
+image_path = sys.argv[1]
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 
-image_path = './dog.jpeg'
+
 
 # img = Image.open(image_path)
 # plt.imshow(img); plt.show()

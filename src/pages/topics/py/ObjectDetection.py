@@ -4,8 +4,9 @@ import torchvision.transforms as transforms
 import torchvision.models as models
 import numpy as np
 from PIL import Image
+import sys
 
-image_path = './dog.jpeg'
+image_path = sys.argv[1]
 
 
 net = models.detection.fasterrcnn_resnet50_fpn(pretrained=True)

@@ -5,9 +5,9 @@ import torchvision.models as models
 import numpy as np
 from PIL import Image
 import matplotlib.pyplot as plt
+import sys
 
-
-image_path = './plane.jpeg'
+image_path = sys.argv[1]
 label_path = './imagenet_classes.txt'
 
 
