@@ -1,128 +1,55 @@
-import React, { Component } from "react";
-import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBDropdown,
-  MDBDropdownMenu,
-  MDBDropdownToggle,
-  MDBDropdownItem,
-  MDBNavItem,
-  MDBFooter,
-  MDBNavLink,
-  MDBTooltip,
-  MDBIcon
-} from "mdbreact";
-import "./index.css";
-import ParticlesBg from 'particles-bg';
-import { BrowserRouter as Router } from 'react-router-dom';
-
-import Routes from './Routes';
-
-class App extends Component {
-  state = {
-    collapseID: ''
-  };
-
-  toggleCollapse = collapseID => () =>
-    this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : ''
-    }));
-
-  closeCollapse = collID => () => {
-    const { collapseID } = this.state;
-    window.scrollTo(0, 0);
-    collapseID === collID && this.setState({ collapseID: '' });
-  };
-
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from './pages/HomePage'
+import ImageVideoClassificationPage from './pages/topics/ImageVideoClassificationPage'
+import ObjectDetectionPage from './pages/topics/ObjectDetectionPage'
+import InstanceSegmentationPage from './pages/topics/InstanceSegmentationPage'
+import ImageVideoEnhancementPage from './pages/topics/ImageVideoEnhancementPage'
+import GenerativeAdversarialNetworksPage from './pages/topics/GenerativeAdversarialNetworksPage'
+import ObjectTrackingPage from './pages/topics/ObjectTrackingPage'
+import RetailPage from './pages/applications/RetailPage'
+import HealthcarePage from './pages/applications/HealthcarePage'
+import ManufacturingPage from './pages/applications/ManufacturingPage'
+import AutonomousVehiclesPage from './pages/applications/AutonomousVehiclesPage'
+import InsurancePage from './pages/applications/InsurancePage'
+import AgriculturePage from './pages/applications/AgriculturePage'
+import DefenseAndSecurityPage from './pages/applications/DefenseAndSecurityPage'
+import Enter from './pages/Enter';
+class App extends React.Component {
+  
   render() {
-    const overlay = (
-      <div
-        id='sidenav-overlay'
-        style={{ backgroundColor: 'transparent' }}
-        onClick={this.toggleCollapse('mainNavbarCollapse')}
-      />
-    );
-
-    const { collapseID } = this.state;
-
+    
     return (
-      <>
-      
-      <div class="body">
+      <> 
+      {/* <Navabar/> */}
       <Router>
-        <MDBNavbar color='indigo' dark expand='md' fixed='top' scrolling>
-          <MDBNavbarBrand href='/homepage' className='py-0 font-weight-bold'>
-            <strong className='align-middle'>CV Online</strong>
-          </MDBNavbarBrand>
-          <MDBNavbarToggler
-            onClick={this.toggleCollapse('mainNavbarCollapse')}
+        <Switch>
+          <Route path="/" exact component={Enter}/>
+          <Route exact path='/homepage' component={HomePage} />
+          <Route exact path='/topics/image-video-classification' component={ImageVideoClassificationPage} />
+          <Route exact path='/topics/object-detection' component={ObjectDetectionPage} />
+          <Route exact path='/topics/instance-segmentation' component={InstanceSegmentationPage} />
+          <Route exact path='/topics/image-video-enhancement' component={ImageVideoEnhancementPage} />
+          <Route exact path='/topics/generative-adversarial-networks' component={GenerativeAdversarialNetworksPage} />
+          <Route exact path='/topics/object-tracking' component={ObjectTrackingPage} />
+          <Route exact path='/applications/retail' component={RetailPage} />
+          <Route exact path='/applications/healthcare' component={HealthcarePage} />
+          <Route exact path='/applications/manufacturing' component={ManufacturingPage} />
+          <Route exact path='/applications/autonomous-vehicles' component={AutonomousVehiclesPage} />
+          <Route exact path='/applications/insurance' component={InsurancePage} />
+          <Route exact path='/applications/agriculture' component={AgriculturePage} />
+          <Route exact path='/applications/defense-and-security' component={DefenseAndSecurityPage} />
+          <Route
+            render={function () {
+              return <h1>Not Found</h1>;
+            }}
           />
-          <MDBCollapse id='mainNavbarCollapse' isOpen={collapseID} navbar>
-            <MDBNavbarNav right>
-              <MDBNavItem>
-                <MDBNavLink
-                  exact
-                  to='/homepage'
-                  onClick={this.closeCollapse('mainNavbarCollapse')}
-                >
-                  <strong>Home</strong>
-                </MDBNavLink>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                    <span className="mr-2"><strong>Topics</strong></span>
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu>
-                    <MDBDropdownItem href="/topics/image-video-classification">Image Classification</MDBDropdownItem>
-                    <MDBDropdownItem href="/topics/object-detection">Object Detection</MDBDropdownItem>
-                    <MDBDropdownItem href="/topics/instance-segmentation">Instance Segmentation</MDBDropdownItem>
-                    <MDBDropdownItem href="/topics/image-video-enhancement">Image Enhancement</MDBDropdownItem>
-                    <MDBDropdownItem href="/topics/generative-adversarial-networks">Generative Adversarial Networks</MDBDropdownItem>
-                    {/* <MDBDropdownItem href="/topics/object-tracking">Object Tracking</MDBDropdownItem> */}
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavItem>
-              <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                    <span className="mr-2"><strong>Applications</strong></span>
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu>
-                    <MDBDropdownItem href="/applications/retail">Retail</MDBDropdownItem>
-                    <MDBDropdownItem href="/applications/healthcare">Healthcare</MDBDropdownItem>
-                    <MDBDropdownItem href="/applications/manufacturing">Manufacturing</MDBDropdownItem>
-                    <MDBDropdownItem href="/applications/autonomous-vehicles">Autonomous Vehicles</MDBDropdownItem>
-                    <MDBDropdownItem href="/applications/insurance">Insurance</MDBDropdownItem>
-                    <MDBDropdownItem href="/applications/agriculture">Agriculture</MDBDropdownItem>
-                    <MDBDropdownItem href="/applications/defense-and-security">Defense and Security</MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavItem>
-            </MDBNavbarNav>
-          </MDBCollapse>
-        </MDBNavbar>
-        {collapseID && overlay}
-        <div >
+        </Switch>
+        </Router>
+        {/* <Foot/> */}
           
-          <Routes />
-        </div>
-        {/* <main style={{ marginTop: '4rem' }}>
-          <Routes />
-        </main> */}
-        <MDBFooter color='indigo'>
-            <p className='footer-copyright mb-0 py-3 text-center'>
-              &copy; {new Date().getFullYear()} Copyright:
-              <a href='https://www.MDBootstrap.com'> MDBootstrap.com </a>
-            </p>
-          </MDBFooter>
-      </Router>
-      </div>
       </>
-    );
+    )
   }
 }
 

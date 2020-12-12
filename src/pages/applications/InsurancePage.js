@@ -1,14 +1,17 @@
 import React from 'react';
-import '../css/pages.css';
 import ParticlesBg from 'particles-bg';
+import Foot from '../component/Foot';
+import Navabar from '../component/Navabar';
 class InsurancePage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
     return (
       <>
-      <ParticlesBg type="circle" bg={true} />
+      
        <div class = "body">
+       <ParticlesBg type="fountain" bg={true} />
+         <Navabar/>
         <div class="page">
         {/* Write your HTML/JSX below */}
         <h1>Insurance</h1>
@@ -17,6 +20,7 @@ class InsurancePage extends React.Component {
         <p>From a preventive point of view, computer vision is of immense help in <b>avoiding accidents</b>; there are applications for preventing collisions, integrated into industrial machinery, cars, and drones. This is a new era of risk management that will most likely change the insurance field.</p>
         {/* Write your HTML/JSX above */}
         </div>
+        <Foot/>
         </div>
       </>
 
