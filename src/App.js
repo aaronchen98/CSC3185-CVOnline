@@ -77,12 +77,12 @@ class App extends Component {
                     <span className="mr-2"><strong>Topics</strong></span>
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <MDBDropdownItem href="/topics/image-video-classification">Image/Video Classification</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/image-video-classification">Image Classification</MDBDropdownItem>
                     <MDBDropdownItem href="/topics/object-detection">Object Detection</MDBDropdownItem>
                     <MDBDropdownItem href="/topics/instance-segmentation">Instance Segmentation</MDBDropdownItem>
-                    <MDBDropdownItem href="/topics/image-video-enhancement">Image/Video Enhancement</MDBDropdownItem>
+                    <MDBDropdownItem href="/topics/image-video-enhancement">Image Enhancement</MDBDropdownItem>
                     <MDBDropdownItem href="/topics/generative-adversarial-networks">Generative Adversarial Networks</MDBDropdownItem>
-                    <MDBDropdownItem href="/topics/object-tracking">Object Tracking</MDBDropdownItem>
+                    {/* <MDBDropdownItem href="/topics/object-tracking">Object Tracking</MDBDropdownItem> */}
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
