@@ -39,13 +39,13 @@ class ImageVideoEnhancementPage extends React.Component {
 
         <h2 id="toc_2">Degradations</h2>
 
-        <p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkamdje9pj30hk0dc40f.jpg" alt=""/></p>
+        <center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkamdje9pj30hk0dc40f.jpg" alt=""/></p></center>
 
         <h2 id="toc_3">Examples</h2>
 
         <p><strong>Old Photo Restoration</strong></p>
 
-        <p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkasdmyc2j30j4066af0.jpg" alt=""/></p>
+        <center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkasdmyc2j30j4066af0.jpg" alt=""/></p></center>
 
         {/* Write your HTML/JSX above */}
         </div>

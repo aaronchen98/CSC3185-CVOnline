@@ -24,7 +24,7 @@ class ImageVideoClassificationPage extends React.Component {
         <p><strong>Example</strong>. For example, in the image below an image classification model takes a single image and assigns probabilities to 4 labels, cat, dog, hat, mug. As shown in the image, keep in mind that to a computer an image is represented as one large 3-dimensional array of numbers. In this example, the cat image is 248 pixels wide, 400 pixels tall, and has three color channels Red,Green,Blue (or RGB for short). Therefore, the image consists of 248 x 400 x 3 numbers, or a total of 297,600 numbers. Each number is an integer that ranges from 0 (black) to 255 (white). Our task is to turn this quarter of a million numbers into a single label, such as “cat”.</p>
 
         <p>The task in Image Classification is to predict a single label (or a distribution over labels as shown here to indicate our confidence) for a given image. Images are 3-dimensional arrays of integers from 0 to 255, of size Width x Height x 3. The 3 represents the three color channels Red, Green, Blue.
-        <img src="https://cs231n.github.io/assets/classify.png" alt=""/></p>
+        <center><img src="https://cs231n.github.io/assets/classify.png" alt=""/></center></p>
 
         <h2 id="toc_2">Supervised classification</h2>
 
@@ -39,7 +39,7 @@ class ImageVideoClassificationPage extends React.Component {
         <p>COCO Sponsored by Microsoft is a large-scale object detection, segmentation, and captioning dataset. It contains images, bounding boxes and labels. There are two versions 2014 and 2017 that use the same images but different train, validation and test splits. COCO defines 91 classes but the data only uses 80 classes and some images don’t have annotations. For the purpose of this project, we picked the 2017 validation dataset which is about 5000 images.
         Through COCO API, we found out that most images have more than one object with annotations for the same or different category. That led us to make use of this property by cropping the objects using the bounding boxes annotation and considering them as independent images in order to overcome the multi classes in the same image problem so we can feed the models with a single class image which makes it easier to classify. As a result, the number of images multiplied more than 20 times as shown in the chart below.</p>
 
-        <p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glk9wuiwjvj30i30o60tg.jpg" alt=""/></p>
+        <center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glk9wuiwjvj30i30o60tg.jpg" alt=""/></p></center>
 
         <h2 id="toc_5">Structure for performing Image Classification</h2>
 
@@ -52,7 +52,7 @@ class ImageVideoClassificationPage extends React.Component {
 
         <h2 id="toc_6">Convolutional Neural Network</h2>
 
-        <p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glk9w55a1xj30rs09hju7.jpg" alt=""/></p>
+        <center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glk9w55a1xj30rs09hju7.jpg" alt=""/></p></center>
 
         <p>Convolutional Neural Network (CNN, or ConvNet) are a special kind of multi-layer neural networks, designed to recognize visual patterns directly from pixel images with minimal pre-processing. It is a special architecture of artificial neural networks. Convolutional neural network uses some of its features of visual cortex and have therefore achieved state of the art results in computer vision tasks. Convolutional neural networks are comprised of two very simple elements, namely convolutional layers and pooling layers. Although simple, there are near-infinite ways to arrange these layers for a given computer vision problem. The elements of a convolutional neural network, such as convolutional and pooling layers, are relatively straightforward to understand. The challenging part of using convolutional neural networks in practice is how to design model architectures that best use these simple elements. The reason why convolutional neural network is hugely popular is because of their architecture, the best thing is there is no need of feature extraction. The system learns to do feature extraction and the core concept is, it uses convolution of image and filters to generate invariant features which are passed on to the next layer. The features in next layer are convoluted with different filters to generate more invariant and abstract features and the process continues till it gets final feature/output which is invariant to occlusions. The most commonly used architectures of convolutional neural network are LeNet, AlexNet, ZFNet, GoogLeNet, VGGNet, and ResNet.</p>
 

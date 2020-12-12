@@ -18,7 +18,7 @@ class InstanceSegmentationPage extends React.Component {
 
 <h2 id="toc_1">Introduction</h2>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkaevsm9xj30rq0bkjza.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkaevsm9xj30rq0bkjza.jpg" alt=""/></p></center>
 
 <p>Instance segmentation is popular image processing task, to understand this technique we must first understand it’s subtasks.</p>
 
@@ -30,19 +30,19 @@ class InstanceSegmentationPage extends React.Component {
 
 <p>Finally <strong><em>Instance Segmentation </em></strong>consist of all previously mentioned tasks with modification for semantic segmentation to apply locally for each object found by object detection and each individual instance of class.</p>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkada5aw2j30ro0ksdsm.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkada5aw2j30ro0ksdsm.jpg" alt=""/></p></center>
 
 <h2 id="toc_2">Examples</h2>
 
 <p>Instance segmentation results:<br/>
-<img src="https://tryolabs.com/blog/images/blog/post-images/computer-vision-guide/instance-segmentation-beatles.aef0d5b6.png" alt="" /></p>
+<center><img src="https://tryolabs.com/blog/images/blog/post-images/computer-vision-guide/instance-segmentation-beatles.aef0d5b6.png" alt="" /></center></p>
 
 <p>You can see in the image above how the instance segmentation algorithm finds masks for the four Beatles and some cars (although the result is incomplete, especially where it comes to Lennon).</p>
 
 <p>Such results would be very expensive if the tasks were carried out manually, but the technology makes it easy to achieve them. In France, the law prohibits exposing children in the media without the explicit consent of their parents. Using instance segmentation techniques, it’s possible to blur out young children’s faces on television or in film, when they are interviewed or captured outdoors, as may be the case during student strikes.</p>
 
 <p>Brain Tumor MRI and corresponding mask:<br/>
-<img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glk7b81arcj312w0nc13b.jpg" alt="Brain Tumor MRI and corresponding mask"/></p>
+<center><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glk7b81arcj312w0nc13b.jpg" alt="Brain Tumor MRI and corresponding mask"/></center></p>
 
 <h2 id="toc_3">Methods</h2>
 
@@ -62,7 +62,7 @@ class InstanceSegmentationPage extends React.Component {
 
 <p>In summary outputs of this network are bounding boxes, classes, scores and masks of predicted objects.</p>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkae840jdj30kx0fxq5f.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkae840jdj30kx0fxq5f.jpg" alt=""/></p></center>
 
 
 

@@ -22,7 +22,7 @@ class ObjectDetectionPage extends React.Component {
 
 <p>Image classification involves predicting the class of one object in an image. Object localization refers to identifying the location of one or more objects in an image and drawing abounding box around their extent. Object detection combines these two tasks and localizes and classifies one or more objects in an image.</p>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glka8fav4dj31o00u07wi.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glka8fav4dj31o00u07wi.jpg" alt=""/></p></center>
 
 <p>As such, we can distinguish between these three computer vision tasks:</p>
 
@@ -65,7 +65,7 @@ class ObjectDetectionPage extends React.Component {
 
 <p>Below is an example comparing single object localization and object detection, taken from the ILSVRC paper. Note the difference in ground truth expectations in each case.</p>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glka6v8tiuj30iy0h0nbv.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glka6v8tiuj30iy0h0nbv.jpg" alt=""/></p></center>
 
 <h2 id="toc_2">Method</h2>
 
@@ -85,7 +85,7 @@ class ObjectDetectionPage extends React.Component {
 
 <p>The architecture of the model is summarized in the image below, taken from the paper.</p>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glka9g4vrxj30rm09on2f.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glka9g4vrxj30rm09on2f.jpg" alt=""/></p></center>
 
 <p>A computer vision technique is used to propose candidate regions or bounding boxes of potential objects in the image called “selective search,” although the flexibility of the design allows other region proposal algorithms to be used.</p>
 
@@ -115,7 +115,7 @@ class ObjectDetectionPage extends React.Component {
 
 <p>The architecture of the model is summarized in the image below, taken from the paper.</p>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkaai6wokj30uw0cedrr.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkaai6wokj30uw0cedrr.jpg" alt=""/></p></center>
 
 <h3 id="toc_5">YOLO</h3>
 
@@ -131,7 +131,7 @@ class ObjectDetectionPage extends React.Component {
 
 <p>For example, an image may be divided into a 7×7 grid and each cell in the grid may predict 2 bounding boxes, resulting in 94 proposed bounding box predictions. The class probabilities map and the bounding boxes with confidences are then combined into a final set of bounding boxes and class labels. The image taken from the paper below summarizes the two outputs of the model.</p>
 
-<p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkabb23s4j30ss0imtp8.jpg" alt=""/></p>
+<center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkabb23s4j30ss0imtp8.jpg" alt=""/></p></center>
 
 
 
