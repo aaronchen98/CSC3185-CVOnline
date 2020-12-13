@@ -52,7 +52,7 @@ class GenerativeAdversarialNetworksPage extends React.Component {
 
         <br/>
         <h2 id="toc_2">A Interesting Demo</h2>
-        <a href="http://127.0.0.1:8000">Demo</a>
+        <a href="http://127.0.0.1:3185">Demo</a>
 
         {/* Write your HTML/JSX above */}
         </div>
