@@ -10,6 +10,13 @@
 2. Install the cv demo package by running `pip install -r requirements.txt` in terminal. You can use `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt` to speed up
 3. Run `node app.js`
 
+### GAN demo
+
+1. Open the `/backend/server` folder in Terminal
+2. `pip install -r requirements.txt` .     
+	You can use `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt` to speed up
+3. `python server.py`
+
 ## How to add new page
 1. Add a new JS file `src/pages/ExamplePage.js`. Use `src/pages/HomePage.js` as template
 2. Add a new route entry with unique URL in `Routes.js`
