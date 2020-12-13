@@ -12,7 +12,10 @@ import {
     MDBNavItem,
     MDBNavLink
   } from "mdbreact";
-class Navabar extends Component {
+  import { Layout, Menu, Breadcrumb } from 'antd';
+
+  const { Header, Content, Footer } = Layout;
+    class Navabar extends Component {
     state = {
         collapseID: ''
       };

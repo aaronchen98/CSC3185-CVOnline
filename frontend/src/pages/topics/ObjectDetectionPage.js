@@ -2,77 +2,58 @@ import React from 'react';
 import ParticlesBg from 'particles-bg';
 import Foot from '../component/Foot';
 import Navabar from '../component/Navabar';
-import { Input } from 'antd';
-import { Button } from 'antd';
-import { PoweroffOutlined } from '@ant-design/icons';
+import {Upload, message  } from 'antd';
+import { InboxOutlined } from '@ant-design/icons';
 import axios from'axios';
-import result from './py/output/detection.png';
-const fake = 'https://res.cloudinary.com/candicelin/image/upload/v1607817705/dog_kqdssb.jpg';
 
+axios.defaults.withCredentials = true;
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+const { Dragger } = Upload;
 class ObjectDetectionPage extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      loadings: [],
-      src:'',
       classify:false,
-      input:false
+      pic:['',''],
     };
-    this.handleInput = this.handleInput.bind(this);
-    this.handleDetection = this.handleDetection.bind(this);
-  }
-  handleInput(e) {
-    var value = e.target.value
-        this.setState({
-            src:value
-        })
-}
-  async handleDetection(){
-    // await axios.post(`${server}/classification`,
-    // {src:this.state.src})
-    // .then(function(res){
-    //   this.setState(({ loadings }) => {
-    //     const newLoadings = [...loadings];
-    //     newLoadings[index] = false;
-
-    //     return {
-    //       loadings: newLoadings,
-    //       classify:true
-    //     };
-    //   });
-    // })
-    // .catch(function(err){
-    //   console.log(err);
-    // })
   }
   scrollToTop = () => window.scrollTo(0, 0);
- 
-  enterLoading = index => {
-    this.setState(({ loadings }) => {
-      const newLoadings = [...loadings];
-      newLoadings[index] = true;
-
-      return {
-        loadings: newLoadings,
-        classify:false,
-        input:true
-      };
-    });
-    setTimeout(() => {
-      this.setState(({ loadings }) => {
-        const newLoadings = [...loadings];
-        newLoadings[index] = false;
-
-        return {
-          loadings: newLoadings,
-          classify:true
-        };
-      });
-    }, 6000);
-  };
-    
   render() {
-    const { loadings } = this.state;
+
+    const _this = this;
+    const  props = {
+      name: 'file',
+      action: 'http://localhost:8080/upload/detection',
+      headers: {
+        authorization: 'authorization-text',
+      },
+      onChange(info) {
+        if (info.file.status !== 'done') {
+          _this.setState({classify:false})
+          
+        }
+        if (info.file.status !== 'uploading') {
+          console.log(info.file, info.fileList);
+        }
+        if (info.file.status === 'done') {
+          console.log(info)
+          _this.setState({pic:['data:image/png;base64,' + info.file.response.in,'data:image/png;base64,' + info.file.response.out],classify:true})
+          message.success(`${info.file.name} file uploaded successfully`);
+        } else if (info.file.status === 'error') {
+          message.error(`${info.file.name} file upload failed.`);
+        }
+      },
+      progress: {
+        strokeColor: {
+          '0%': '#108ee9',
+          '100%': '#87d068',
+        },
+        strokeWidth: 3,
+        status:"active",
+        percent:99
+        // format: percent => `${parseFloat(percent.toFixed(2))}%`,
+      },
+    };
     return (
       <>
       
@@ -200,28 +181,24 @@ class ObjectDetectionPage extends React.Component {
 
 <center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glkabb23s4j30ss0imtp8.jpg" alt=""/></p></center>
 
-<h2>Object Detection Demo:</h2>
-        <center>
-          <div class="input">
-          <Input placeholder="Image src" id="src"
-          onChange={(e)=>this.handleInput(e)}/>
-          
-          <Button
-          type="primary"
-          icon={<PoweroffOutlined />}
-          loading={loadings[1]}
-          onClick={() => {this.enterLoading(1);this.handleDetection()}}
-        >
-          Detect
-        </Button>
-        </div>
+        <h2>Object Detection Demo:</h2>
+        <Dragger {...props}>
+          <p className="ant-upload-drag-icon">
+            <InboxOutlined />
+          </p>
+          <p className="ant-upload-text">Click or drag file to this area to upload</p>
+          <p className="ant-upload-hint">
+            Support for a single or bulk upload. Strictly prohibit from uploading company data or other
+            band files
+          </p>
+        </Dragger>
         <br/>
-        {this.state.input?<img src={fake}></img>:null}
-        {/* {this.state.input?<img src={this.state.src}></img>:null} */}
-        </center>
-        <h3>Result:</h3>
         <center>
-        {this.state.classify?<img src={result}></img>:null}
+        {this.state.classify?<img src={this.state.pic[0]}></img>:null}
+        </center>
+        {this.state.classify?<h3>Result:</h3>:null}
+        <center>
+          {this.state.classify?<img src={this.state.pic[1]}></img>:null}
         </center>
 
         {/* Write your HTML/JSX above */}

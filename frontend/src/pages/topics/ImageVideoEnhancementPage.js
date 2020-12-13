@@ -6,6 +6,7 @@ class ImageVideoEnhancementPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
 
   render() {
+    
     return (
       <>
       
@@ -19,7 +20,7 @@ class ImageVideoEnhancementPage extends React.Component {
 
         <div align="center">
           <img src="https://tva1.sinaimg.cn/large/0081Kckwgy1gk6hhf7dxtj319d0g7dt9.jpg" width="50%" alt="" />
-        <small><center>Example 1: Image Inpainting</center></small>
+        <div class="description">Example 1: Image Inpainting</div>
         </div>
 
         <p>Image restoration deems to reconstruct or recover a original image from degraded image by utilizing a priori knowledge of the degradation phenomenon which is also called as ill-posed inverse problem. In image restoration problem or ill-posed inverse problem, the information loss due to image acquisition and transmission is restored based on some constraints which are suitable for natural images and medical images.</p>
@@ -34,7 +35,7 @@ class ImageVideoEnhancementPage extends React.Component {
 
         <div align="center">
         <iframe width="641" height="361" src="https://www.youtube.com/embed/8DPHSwpDNVc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <small><center>Example 2: Image Super-Resolution</center></small>
+        <div class="description">Example 2: Image Super-Resolution</div>
         </div>
 
         <h2 id="toc_2">Degradations</h2>

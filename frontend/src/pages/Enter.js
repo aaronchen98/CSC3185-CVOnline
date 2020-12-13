@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ParticlesBg from 'particles-bg';
 import { Redirect } from 'react-router-dom';
+import '../css/enter.css';
 import MouseParticles from 'react-mouse-particles';
 class Enter extends Component {
   constructor(props){

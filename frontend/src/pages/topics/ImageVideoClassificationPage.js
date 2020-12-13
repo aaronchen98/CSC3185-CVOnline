@@ -2,79 +2,58 @@ import React from 'react';
 import ParticlesBg from 'particles-bg';
 import Foot from '../component/Foot';
 import Navabar from '../component/Navabar';
-import { Input } from 'antd';
-import { Button } from 'antd';
-import { PoweroffOutlined } from '@ant-design/icons';
+import {Upload, message  } from 'antd';
+import { InboxOutlined } from '@ant-design/icons';
 import axios from'axios';
-import result from './py/output/classification.png';
-const fake = 'https://res.cloudinary.com/candicelin/image/upload/v1607795113/sample.jpg';
-// axios.defaults.withCredentials = true;
-// axios.defaults.headers.post['Content-Type'] = 'application/json'
-const server = 'http://localhost:8080'
+
+axios.defaults.withCredentials = true;
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+const { Dragger } = Upload;
 class ImageVideoClassificationPage extends React.Component {
   constructor(props){
     super(props);
     this.state={
-      loadings: [],
-      src:'',
       classify:false,
-      input:false
+      pic:['',''],
     };
-    this.handleInput = this.handleInput.bind(this);
-    this.handleClassify = this.handleClassify.bind(this);
-  }
-  handleInput(e) {
-    var value = e.target.value
-        this.setState({
-            src:value
-        })
-}
-  async handleClassify(){
-    await axios.get(`${server}/classification`,
-    {src:this.state.src})
-    // .then(function(res){
-    //   this.setState(({ loadings }) => {
-    //     const newLoadings = [...loadings];
-    //     newLoadings[index] = false;
-
-    //     return {
-    //       loadings: newLoadings,
-    //       classify:true
-    //     };
-    //   });
-    // })
-    // .catch(function(err){
-    //   console.log(err);
-    // })
   }
   scrollToTop = () => window.scrollTo(0, 0);
  
-  enterLoading = index => {
-    this.setState(({ loadings }) => {
-      const newLoadings = [...loadings];
-      newLoadings[index] = true;
-
-      return {
-        loadings: newLoadings,
-        classify:false,
-        input:true
-      };
-    });
-    setTimeout(() => {
-      this.setState(({ loadings }) => {
-        const newLoadings = [...loadings];
-        newLoadings[index] = false;
-
-        return {
-          loadings: newLoadings,
-          classify:true
-        };
-      });
-    }, 6000);
-  };
-    
   render() {
-    const { loadings } = this.state;
+    const _this = this;
+    const  props = {
+      name: 'file',
+      action: 'http://localhost:8080/upload/classification',
+      headers: {
+        authorization: 'authorization-text',
+      },
+      onChange(info) {
+        if (info.file.status !== 'done') {
+          _this.setState({classify:false})
+          
+        }
+        if (info.file.status !== 'uploading') {
+          console.log(info.file, info.fileList);
+        }
+        if (info.file.status === 'done') {
+          console.log(info)
+          _this.setState({pic:['data:image/png;base64,' + info.file.response.in,'data:image/png;base64,' + info.file.response.out],classify:true})
+          message.success(`${info.file.name} file uploaded successfully`);
+        } else if (info.file.status === 'error') {
+          message.error(`${info.file.name} file upload failed.`);
+        }
+      },
+      progress: {
+        strokeColor: {
+          '0%': '#108ee9',
+          '100%': '#87d068',
+        },
+        strokeWidth: 3,
+        status:"active",
+        percent:99
+        // format: percent => `${parseFloat(percent.toFixed(2))}%`,
+      },
+    };
     return (
       <>
       
@@ -124,29 +103,27 @@ class ImageVideoClassificationPage extends React.Component {
         <center><p><img src="https://tva1.sinaimg.cn/large/0081Kckwgy1glk9w55a1xj30rs09hju7.jpg" alt=""/></p></center>
 
         <p>Convolutional Neural Network (CNN, or ConvNet) are a special kind of multi-layer neural networks, designed to recognize visual patterns directly from pixel images with minimal pre-processing. It is a special architecture of artificial neural networks. Convolutional neural network uses some of its features of visual cortex and have therefore achieved state of the art results in computer vision tasks. Convolutional neural networks are comprised of two very simple elements, namely convolutional layers and pooling layers. Although simple, there are near-infinite ways to arrange these layers for a given computer vision problem. The elements of a convolutional neural network, such as convolutional and pooling layers, are relatively straightforward to understand. The challenging part of using convolutional neural networks in practice is how to design model architectures that best use these simple elements. The reason why convolutional neural network is hugely popular is because of their architecture, the best thing is there is no need of feature extraction. The system learns to do feature extraction and the core concept is, it uses convolution of image and filters to generate invariant features which are passed on to the next layer. The features in next layer are convoluted with different filters to generate more invariant and abstract features and the process continues till it gets final feature/output which is invariant to occlusions. The most commonly used architectures of convolutional neural network are LeNet, AlexNet, ZFNet, GoogLeNet, VGGNet, and ResNet.</p>
+        
         <h2>Classification Demo:</h2>
-        <center>
-          <div class="input">
-          <Input placeholder="Image src" id="src"
-          onChange={(e)=>this.handleInput(e)}/>
-          
-          <Button
-          type="primary"
-          icon={<PoweroffOutlined />}
-          loading={loadings[1]}
-          onClick={() => {this.enterLoading(1);this.handleClassify()}}
-        >
-          Classify
-        </Button>
-        </div>
+        <Dragger {...props}>
+          <p className="ant-upload-drag-icon">
+            <InboxOutlined />
+          </p>
+          <p className="ant-upload-text">Click or drag file to this area to upload</p>
+          <p className="ant-upload-hint">
+            Support for a single or bulk upload. Strictly prohibit from uploading company data or other
+            band files
+          </p>
+        </Dragger>
         <br/>
-        {this.state.input?<img src={fake}></img>:null}
-        {/* {this.state.input?<img src={this.state.src}></img>:null} */}
-        </center>
-        <h3>Result:</h3>
         <center>
-        {this.state.classify?<img src={result}></img>:null}
+        {this.state.classify?<img src={this.state.pic[0]}></img>:null}
         </center>
+        {this.state.classify?<h3>Result:</h3>:null}
+        <center>
+          {this.state.classify?<img src={this.state.pic[1]}></img>:null}
+        </center>
+          
         {/* Write your HTML/JSX above */}
         </div>
         <Foot/>

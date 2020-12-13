@@ -1,4 +1,5 @@
 
+
 .intro-container {
     position: absolute;
     top: 50%;
@@ -10,15 +11,18 @@
     left: 0;
 }
 
-h1 {
+.intro-container h1{
+    color:white;
     font-family: 'brandon-grotesque', sans-serif;
     font-weight: bold;
     margin-top: 0px;
     margin-bottom: 0;
     font-size: 20px;
 }
+
+
 @media screen and (min-width: 860px) {
-    h1 {
+    .intro-container h1 {
         font-size: 40px;
         line-height: 52px;
     }
