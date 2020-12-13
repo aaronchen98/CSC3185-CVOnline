@@ -19,7 +19,7 @@ class ObjectDetectionPage extends React.Component {
       input:false
     };
     this.handleInput = this.handleInput.bind(this);
-    this.handleClassify = this.handleClassify.bind(this);
+    this.handleDetection = this.handleDetection.bind(this);
   }
   handleInput(e) {
     var value = e.target.value
@@ -27,7 +27,7 @@ class ObjectDetectionPage extends React.Component {
             src:value
         })
 }
-  async handleClassify(index){
+  async handleDetection(){
     // await axios.post(`${server}/classification`,
     // {src:this.state.src})
     // .then(function(res){
@@ -210,7 +210,7 @@ class ObjectDetectionPage extends React.Component {
           type="primary"
           icon={<PoweroffOutlined />}
           loading={loadings[1]}
-          onClick={() => {this.enterLoading(1);this.handleClassify()}}
+          onClick={() => {this.enterLoading(1);this.handleDetection()}}
         >
           Detect
         </Button>

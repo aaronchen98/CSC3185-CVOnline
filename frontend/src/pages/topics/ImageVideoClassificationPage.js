@@ -29,9 +29,9 @@ class ImageVideoClassificationPage extends React.Component {
             src:value
         })
 }
-  async handleClassify(index){
-    // await axios.post(`${server}/classification`,
-    // {src:this.state.src})
+  async handleClassify(){
+    await axios.get(`${server}/classification`,
+    {src:this.state.src})
     // .then(function(res){
     //   this.setState(({ loadings }) => {
     //     const newLoadings = [...loadings];

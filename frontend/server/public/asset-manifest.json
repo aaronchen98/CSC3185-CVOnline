@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fddb82c7.chunk.css",
+    "main.js": "/static/js/main.fda57ec8.chunk.js",
+    "main.js.map": "/static/js/main.fda57ec8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7974d308.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7974d308.js.map",
+    "static/css/2.ff99d9af.chunk.css": "/static/css/2.ff99d9af.chunk.css",
+    "static/js/2.1386d1b3.chunk.js": "/static/js/2.1386d1b3.chunk.js",
+    "static/js/2.1386d1b3.chunk.js.map": "/static/js/2.1386d1b3.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.231541a68032703fff6d7838fd8f77ae.js": "/precache-manifest.231541a68032703fff6d7838fd8f77ae.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.ff99d9af.chunk.css.map": "/static/css/2.ff99d9af.chunk.css.map",
+    "static/css/main.fddb82c7.chunk.css.map": "/static/css/main.fddb82c7.chunk.css.map",
+    "static/js/2.1386d1b3.chunk.js.LICENSE.txt": "/static/js/2.1386d1b3.chunk.js.LICENSE.txt",
+    "static/media/agriculture1.png": "/static/media/agriculture1.901aa7fa.png",
+    "static/media/mdb.css": "/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/classification.png": "/static/media/classification.cae60c9f.png",
+    "static/media/detection.png": "/static/media/detection.45312ae4.png",
+    "static/media/all.min.css": "/static/media/fa-solid-900.8e1ed89b.woff2",
+    "static/media/health1.png": "/static/media/health1.6cbb4940.png",
+    "static/media/manufacturing1.png": "/static/media/manufacturing1.5ec57730.png",
+    "static/media/retail1.png": "/static/media/retail1.41f506ed.png",
+    "static/media/retail2.png": "/static/media/retail2.3c48c7c9.png",
+    "static/media/vehicle1.gif": "/static/media/vehicle1.48e1a479.gif"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7974d308.js",
+    "static/css/2.ff99d9af.chunk.css",
+    "static/js/2.1386d1b3.chunk.js",
+    "static/css/main.fddb82c7.chunk.css",
+    "static/js/main.fda57ec8.chunk.js"
+  ]
+}
