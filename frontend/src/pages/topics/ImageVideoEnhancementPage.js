@@ -4,12 +4,9 @@ import Foot from '../component/Foot';
 import Navabar from '../component/Navabar';
 class ImageVideoEnhancementPage extends React.Component {
   scrollToTop = () => window.scrollTo(0, 0);
-
   render() {
-    
     return (
       <>
-      
       <div class = "body">
       <ParticlesBg type="square" bg={true} />
         <Navabar/>

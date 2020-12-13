@@ -46,8 +46,7 @@ app.post('/upload/classification', async (req, res) => {
           console.log('Filename: ' + inputFile.originalFilename);
 
           var dstPath = './uploads/classification/target.jpg';
-          // var dstPath = './uploads/' + inputFile.originalFilename;
-           //重命名为真实文件名
+          //重命名为指定文件名
             fs.rename(uploadedPath, dstPath, function(err) {
              if(err){
               console.log('rename error: ' + err);
@@ -59,7 +58,6 @@ app.post('/upload/classification', async (req, res) => {
 
         //执行python文件
         const pp = spawn('python3', ['./py/Classification.py']);
-        // const pp = spawn('python', ['./test.py', 'hello']);
         pp.stdout.on('data', (data) => {
 			console.log(`stdout: ${data}`);
     });
@@ -99,8 +97,7 @@ app.post('/upload/detection', async (req, res) => {
         console.log('Filename: ' + inputFile.originalFilename);
 
         var dstPath = './uploads/detection/target.jpg';
-        // var dstPath = './uploads/' + inputFile.originalFilename;
-         //重命名为真实文件名
+        //重命名为指定文件名
           fs.rename(uploadedPath, dstPath, function(err) {
            if(err){
             console.log('rename error: ' + err);
@@ -112,7 +109,7 @@ app.post('/upload/detection', async (req, res) => {
 
       //执行python文件
       const pp = spawn('python3', ['./py/ObjectDetection.py']);
-      // const pp = spawn('python', ['./test.py', 'hello']);
+      
       pp.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
   });
@@ -152,8 +149,7 @@ app.post('/upload/segmentation', async (req, res) => {
         console.log('Filename: ' + inputFile.originalFilename);
 
         var dstPath = './uploads/segmentation/target.jpg';
-        // var dstPath = './uploads/' + inputFile.originalFilename;
-         //重命名为真实文件名
+        //重命名为指定文件名
           fs.rename(uploadedPath, dstPath, function(err) {
            if(err){
             console.log('rename error: ' + err);

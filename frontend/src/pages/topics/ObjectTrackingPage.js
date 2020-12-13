@@ -8,17 +8,16 @@ class ObjectTrackingPage extends React.Component {
   render() {
     return (
       <>
-      
-      <div class = "body">
-      <ParticlesBg type="square" bg={true} />
-      <Navabar/>
-        <div class="page">
-        {/* Write your HTML/JSX below */}
-        <h1>Example Title</h1>
-        <p>Example text</p>
-        {/* Write your HTML/JSX above */}
-        </div>
-        <Foot/>
+        <div class  = "body">
+          <ParticlesBg type="square" bg={true} />
+          <Navabar/>
+          <div class="page">
+            {/* Write your HTML/JSX below */}
+            <h1>Example Title</h1>
+            <p>Example text</p>
+            {/* Write your HTML/JSX above */}
+          </div>
+          <Foot/>
         </div>
       </>
     )
