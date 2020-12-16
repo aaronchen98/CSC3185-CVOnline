@@ -1,4 +1,7 @@
 # CVOline
+
+Computer Vision homepage with demos.
+
 ![](homepage.jpg)
 
 ## How to run frontend
