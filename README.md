@@ -15,7 +15,7 @@
 1. Open the `/backend/server` folder in Terminal
 2. `pip install -r requirements.txt` .     
 	You can use `pip install -i https://pypi.tuna.tsinghua.edu.cn/simple -r requirements.txt` to speed up
-3. `python server.py`
+3. `python serve.py`
 
 ## How to add new page
 1. Add a new JS file `src/pages/ExamplePage.js`. Use `src/pages/HomePage.js` as template
