@@ -1,3 +1,6 @@
+# CVOline
+![](./homepage.jpg)
+
 ## How to run frontend
 1. Install NodeJS and NPM from https://nodejs.org/en/download/
 2. Use Aliyun NPM mirror from https://developer.aliyun.com/mirror/NPM
